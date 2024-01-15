@@ -86,6 +86,7 @@ function selectAnswer(e)
     const isCorrect = selectedBtn.dataset.correct === "true";
         if(isCorrect) {
         selectedBtn.classList.add("correct");
+        score++;
     }
     else
     {
@@ -99,5 +100,33 @@ function selectAnswer(e)
         });
         nextButton.style.display = "block" ;
 }
+
+
+function showScore(){
+    resetState();
+    questionElement.innerHTML = "Your score is " + score + " out of " + questions.length;
+    nextButton.innerHTML = "Restart";
+    nextButton.style.display = "block";
+    //nextButton.addEventListener("click", startQuiz);
+}
+
+function handleNextButton(){
+    currentQuestionIndex++;
+    if(currentQuestionIndex < questions.length){
+        showQuestion();
+    }else{
+        showScore();
+    }
+}
+
+
+nextButton.addEventListener("click", () => {
+    if(currentQuestionIndex < questions.length){
+        handleNextButton();
+    }
+    else{
+        startQuiz();
+    }
+});
 
 startQuiz();
