@@ -44,6 +44,15 @@ const questions = [
             { text: "Ottawa", correct: true},
             { text: "Toronto", correct: false},
         ]
+    }, 
+    {
+        question: "What is the national sport(Spring season) of Canada?",
+        answers: [
+            { text: "Football", correct: false},
+            { text: "Lacrosse", correct: true},
+            { text: "Ice Hockey", correct: false},
+            { text: "Baseball", correct: false},
+        ]
     }
 ];
 
