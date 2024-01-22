@@ -35,6 +35,15 @@ const questions = [
             { text: "Kangchenjunga", correct: false},
             { text: "Makalu", correct: false},
         ]
+    },
+    {
+        question: "What is the capital of Canada?",
+        answers: [
+            { text: "Listowel", correct: false},
+            { text: "Edmonton", correct: false},
+            { text: "Ottawa", correct: true},
+            { text: "Toronto", correct: false},
+        ]
     }
 ];
 
